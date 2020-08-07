@@ -1,10 +1,12 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    num_counts = {}
+    for array in arrays:
+        for num in array:
+            if num in num_counts:
+                num_counts[num] += 1
+            else:
+                num_counts[num] = 1
+    return [num for num in num_counts.keys() if num_counts[num] == len(arrays)]
 
 
 if __name__ == "__main__":
