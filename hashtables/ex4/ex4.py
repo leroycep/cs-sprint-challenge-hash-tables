@@ -1,9 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    number_set = {}
+    result = []
+    for num in a:
+        if -num in number_set:
+            result.append(abs(num))
+        else:
+            number_set[num] = True
     return result
 
 
